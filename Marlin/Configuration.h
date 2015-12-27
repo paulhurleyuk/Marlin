@@ -375,7 +375,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -587,7 +587,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {116.36,116.36,8000,1487.4672}  // default steps per unit for Ultimaker
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {160,160,8000,2378.76}  // default steps per unit for Ultimaker
     // calculated values for P3Steel 116.36, 116.36, 800, 1487.4672
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 2, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,75,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.

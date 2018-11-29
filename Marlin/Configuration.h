@@ -86,7 +86,11 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
+<<<<<<< HEAD
 #define STRING_CONFIG_H_AUTHOR "Paul Hurley paul@paulhurley.co.uk" // Who made the changes.
+=======
+#define STRING_CONFIG_H_AUTHOR "Paul Hurley, Marlin Git" // Who made the changes.
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -114,6 +118,7 @@
  */
 #define SERIAL_PORT 0
 
+<<<<<<< HEAD
 /**
  * This setting determines the communication speed of the printer.
  *
@@ -122,6 +127,10 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000]
  */
+=======
+// This determines the communication speed of the printer
+// :[2400,9600,19200,38400,57600,115200,250000]
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 #define BAUDRATE 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
@@ -135,7 +144,11 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
+<<<<<<< HEAD
 //#define CUSTOM_MACHINE_NAME "P3Steel Paul"
+=======
+#define CUSTOM_MACHINE_NAME "P3Steel Paul"
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -203,6 +216,7 @@
 //===========================================================================
 //============================= Thermal Settings ============================
 //===========================================================================
+<<<<<<< HEAD
 
 /**
  * --NORMAL IS 4.7kohm PULLUP!-- 1kohm pullup can be used on hotend sensor, using correct resistor and table
@@ -249,15 +263,63 @@
  *
  * :{ '0': "Not used", '1':"100k / 4.7k - EPCOS", '2':"200k / 4.7k - ATC Semitec 204GT-2", '3':"Mendel-parts / 4.7k", '4':"10k !! do not use for a hotend. Bad resolution at high temp. !!", '5':"100K / 4.7k - ATC Semitec 104GT-2 (Used in ParCan & J-Head)", '6':"100k / 4.7k EPCOS - Not as accurate as Table 1", '7':"100k / 4.7k Honeywell 135-104LAG-J01", '8':"100k / 4.7k 0603 SMD Vishay NTCS0603E3104FXT", '9':"100k / 4.7k GE Sensing AL03006-58.2K-97-G1", '10':"100k / 4.7k RS 198-961", '11':"100k / 4.7k beta 3950 1%", '12':"100k / 4.7k 0603 SMD Vishay NTCS0603E3104FXT (calibrated for Makibox hot bed)", '13':"100k Hisens 3950  1% up to 300°C for hotend 'Simple ONE ' & hotend 'All In ONE'", '20':"PT100 (Ultimainboard V2.x)", '51':"100k / 1k - EPCOS", '52':"200k / 1k - ATC Semitec 204GT-2", '55':"100k / 1k - ATC Semitec 104GT-2 (Used in ParCan & J-Head)", '60':"100k Maker's Tool Works Kapton Bed Thermistor beta=3950", '66':"Dyze Design 4.7M High Temperature thermistor", '70':"the 100K thermistor found in the bq Hephestos 2", '71':"100k / 4.7k Honeywell 135-104LAF-J01", '147':"Pt100 / 4.7k", '1047':"Pt1000 / 4.7k", '110':"Pt100 / 1k (non-standard)", '1010':"Pt1000 / 1k (non standard)", '-3':"Thermocouple + MAX31855 (only for sensor 0)", '-2':"Thermocouple + MAX6675 (only for sensor 0)", '-1':"Thermocouple + AD595",'998':"Dummy 1", '999':"Dummy 2" }
  */
+=======
+//
+//--NORMAL IS 4.7kohm PULLUP!-- 1kohm pullup can be used on hotend sensor, using correct resistor and table
+//
+//// Temperature sensor settings:
+// -3 is thermocouple with MAX31855 (only for sensor 0)
+// -2 is thermocouple with MAX6675 (only for sensor 0)
+// -1 is thermocouple with AD595
+// 0 is not used
+// 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup)
+// 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup)
+// 3 is Mendel-parts thermistor (4.7k pullup)
+// 4 is 10k thermistor !! do not use it for a hotend. It gives bad resolution at high temp. !!
+// 5 is 100K thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (4.7k pullup)
+// 6 is 100k EPCOS - Not as accurate as table 1 (created using a fluke thermocouple) (4.7k pullup)
+// 7 is 100k Honeywell thermistor 135-104LAG-J01 (4.7k pullup)
+// 71 is 100k Honeywell thermistor 135-104LAF-J01 (4.7k pullup)
+// 8 is 100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup)
+// 9 is 100k GE Sensing AL03006-58.2K-97-G1 (4.7k pullup)
+// 10 is 100k RS thermistor 198-961 (4.7k pullup)
+// 11 is 100k beta 3950 1% thermistor (4.7k pullup)
+// 12 is 100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup) (calibrated for Makibox hot bed)
+// 13 is 100k Hisens 3950  1% up to 300°C for hotend "Simple ONE " & "Hotend "All In ONE"
+// 20 is the PT100 circuit found in the Ultimainboard V2.x
+// 60 is 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
+// 66 is 4.7M High Temperature thermistor from Dyze Design
+// 70 is the 100K thermistor found in the bq Hephestos 2
+//
+//    1k ohm pullup tables - This is not normal, you would have to have changed out your 4.7k for 1k
+//                          (but gives greater accuracy and more stable PID)
+// 51 is 100k thermistor - EPCOS (1k pullup)
+// 52 is 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
+// 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (1k pullup)
+//
+// 1047 is Pt1000 with 4k7 pullup
+// 1010 is Pt1000 with 1k pullup (non standard)
+// 147 is Pt100 with 4k7 pullup
+// 110 is Pt100 with 1k pullup (non standard)
+// 998 and 999 are Dummy Tables. They will ALWAYS read 25°C or the temperature defined below.
+//     Use it for Testing or Development purposes. NEVER for production machine.
+//#define DUMMY_THERMISTOR_998_VALUE 25
+//#define DUMMY_THERMISTOR_999_VALUE 100
+// :{ '0': "Not used",'1':"100k / 4.7k - EPCOS",'2':"200k / 4.7k - ATC Semitec 204GT-2",'3':"Mendel-parts / 4.7k",'4':"10k !! do not use for a hotend. Bad resolution at high temp. !!",'5':"100K / 4.7k - ATC Semitec 104GT-2 (Used in ParCan & J-Head)",'6':"100k / 4.7k EPCOS - Not as accurate as Table 1",'7':"100k / 4.7k Honeywell 135-104LAG-J01",'8':"100k / 4.7k 0603 SMD Vishay NTCS0603E3104FXT",'9':"100k / 4.7k GE Sensing AL03006-58.2K-97-G1",'10':"100k / 4.7k RS 198-961",'11':"100k / 4.7k beta 3950 1%",'12':"100k / 4.7k 0603 SMD Vishay NTCS0603E3104FXT (calibrated for Makibox hot bed)",'13':"100k Hisens 3950  1% up to 300°C for hotend 'Simple ONE ' & hotend 'All In ONE'",'20':"PT100 (Ultimainboard V2.x)",'51':"100k / 1k - EPCOS",'52':"200k / 1k - ATC Semitec 204GT-2",'55':"100k / 1k - ATC Semitec 104GT-2 (Used in ParCan & J-Head)",'60':"100k Maker's Tool Works Kapton Bed Thermistor beta=3950",'66':"Dyze Design 4.7M High Temperature thermistor",'70':"the 100K thermistor found in the bq Hephestos 2",'71':"100k / 4.7k Honeywell 135-104LAF-J01",'147':"Pt100 / 4.7k",'1047':"Pt1000 / 4.7k",'110':"Pt100 / 1k (non-standard)",'1010':"Pt1000 / 1k (non standard)",'-3':"Thermocouple + MAX31855 (only for sensor 0)",'-2':"Thermocouple + MAX6675 (only for sensor 0)",'-1':"Thermocouple + AD595",'998':"Dummy 1",'999':"Dummy 2" }
+
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 #define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_BED 5
+<<<<<<< HEAD
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
 #define DUMMY_THERMISTOR_998_VALUE 25
 #define DUMMY_THERMISTOR_999_VALUE 100
+=======
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 // Use temp sensor 1 as a redundant sensor with sensor 0. If the readings
 // from the two sensors differ too much the print will be aborted.
@@ -380,10 +442,15 @@
 #define PREVENT_COLD_EXTRUSION
 #define EXTRUDE_MINTEMP 150
 
+<<<<<<< HEAD
 // This option prevents a single extrusion longer than EXTRUDE_MAXLENGTH.
 // Note that for Bowden Extruders a too-small value here may prevent loading.
 #define PREVENT_LENGTHY_EXTRUDE
 #define EXTRUDE_MAXLENGTH 200
+=======
+#define EXTRUDE_MINTEMP 150
+#define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -720,9 +787,15 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
+<<<<<<< HEAD
 #define X_MAX_POS 195
 #define Y_MAX_POS 195
 #define Z_MAX_POS 195
+=======
+#define X_MAX_POS 190
+#define Y_MAX_POS 190
+#define Z_MAX_POS 190
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 //===========================================================================
 //========================= Filament Runout Sensor ==========================
@@ -886,7 +959,33 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
+<<<<<<< HEAD
 #define HOMING_FEEDRATE_Z  (3*60)
+=======
+#define HOMING_FEEDRATE_Z  (4*60)
+
+//
+// MOVEMENT SETTINGS
+// @section motion
+//
+
+// default settings
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {160,160,8000,1942.2716}  // default steps per unit for Ultimaker
+    // calculated values for P3Steel 116.36, 116.36, 800, 1487.4672
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 2, 25}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {3000,3000,75,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
+
+#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration in mm/s^2 for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
+
+// The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
+#define DEFAULT_XYJERK                20.0    // (mm/sec)
+#define DEFAULT_ZJERK                 0.4     // (mm/sec)
+#define DEFAULT_EJERK                 5.0    // (mm/sec)
+
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 //=============================================================================
 //============================= Additional Features ===========================
@@ -1264,7 +1363,13 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
+<<<<<<< HEAD
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+=======
+// ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+
+>>>>>>> bd66ec32bae1c60cd7e9107fe47cf17396ab9935
 
 //
 // MakerLab Mini Panel with graphic

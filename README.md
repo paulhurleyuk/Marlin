@@ -3,18 +3,23 @@
 
 <img align="top" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
-Additional documentation can be found at [The Marlin Documentation Project](https://www.marlinfw.org/).
-Please test this firmware and inform us if it misbehaves in any way, volunteers are standing by!
+Additional documentation can be found at the [Marlin Home Page](http://marlinfw.org/).
+Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
 
+<<<<<<< HEAD
 ## Release Candidate -- Marlin 1.1.0-RC8 - 6 Dec 2016
+=======
+## Bugfix Branch
+>>>>>>> a0a21e5a2f417f194541a2ccb072e6c29b7c80a3
 
-__Not for production use – use with caution!__
+__Not for production use. Use with caution!__
 
-You can download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases). (The latest "stable" release of Marlin is 1.0.2-1.)
+This branch is used to accumulate patches to the latest 1.1.x release version. Periodically this branch will form the basis for the next minor 1.1.x release.
 
-The latest Release Candidate lives in the ["RC" branch](https://github.com/MarlinFirmware/Marlin/tree/RC). Bugs that we find in the current Release Candidate are patched in the ["RCBugFix" branch](https://github.com/MarlinFirmware/Marlin/tree/RCBugFix), so during beta testing this is where you can always find the latest code on its way towards release.
+Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases). (The latest tagged release of Marlin is version 1.1.7.)
 
 ## Recent Changes
+<<<<<<< HEAD
 - RC8 - 06 Dec 2016
   - Major performance improvement for Graphical LCDs
   - Simplified probe configuration
@@ -94,13 +99,25 @@ The latest Release Candidate lives in the ["RC" branch](https://github.com/Marli
 
 - RC1 - 19 Sep 2015
   - Published for testing
+=======
+- Internally always use native machine space
+- Initial UBL LCD Menu
+- New optimized G-code parser singleton
+- Initial `M3`/`M4`/`M5` Spindle and Laser support
+- Added `M421 Q` to offset a mesh point
+- Refinements to `G26` and `G33`
+- Added `M80 S` to query the power state
+- "Cancel Print" now shuts off heaters
+- Added `EXTRAPOLATE_BEYOND_GRID` option for mesh-based leveling
+>>>>>>> a0a21e5a2f417f194541a2ccb072e6c29b7c80a3
 
 ## Submitting Patches
-Proposed patches should be submitted as a Pull Request against the [RCBugFix](https://github.com/MarlinFirmware/Marlin/tree/RCBugFix) branch.
 
-- Don't submit new feature proposals. The RCBugFix branch is for fixing bugs in existing features.
-- Do submit questions and concerns. The "naive" question is often the one we forget to ask.
-- Follow the proper coding style. Pull requests with styling errors will be delayed. See our [Coding Standards](https://github.com/MarlinFirmware/Marlin/wiki/DNE-Coding-Standards) page for more information.
+Proposed patches should be submitted as a Pull Request against this branch ([bugfix-1.1.x](https://github.com/MarlinFirmware/Marlin/tree/bugfix-1.1.x)).
+
+- This branch is for fixing bugs and integrating any new features for the duration of the Marlin 1.1.x life-cycle. We've opted for a simplified branch structure while we work on the maintainability and encapsulation of code modules. Version 2.0 and beyond should improve on separation of bug fixes and cutting-edge development.
+- Follow the proper coding style to gain points with the maintainers. See our [Coding Standards](http://marlinfw.org/docs/development/coding_standards.html) page for more information.
+- Please submit your questions and concerns to the [Issue Queue](https://github.com/MarlinFirmware/Marlin/issues). The "naive" question is often the one we forget to ask.
 
 ## Current Status: Testing
 
@@ -114,25 +131,43 @@ Please test this firmware and inform us if it misbehaves in any way. Volunteers 
 ## Credits
 
 The current Marlin dev team consists of:
+ - Roxanne Neufeld [[@Roxy-3D](https://github.com/Roxy-3D)]
+ - Scott Lahteine [[@thinkyhead](https://github.com/thinkyhead)]
+ - Bob Kuhn [[@Bob-the-Kuhn](https://github.com/Bob-the-Kuhn)]
 
- - Scott Lahteine [@thinkyhead] - English
- - [@Wurstnase] - Deutsch, English
- - F. Malpartida [@fmalpartida] - English, Spanish
- - Jochen Groppe [@CONSULitAS] - Deutsch, English
- - [@maverikou]
- - Chris Palmer [@nophead]
- - [@paclema]
- - Edward Patel [@epatel] - Swedish, English
- - Erik van der Zalm [@ErikZalm]
- - David Braam [@daid]
- - Bernhard Kubicek [@bkubicek]
- - Roxanne Neufeld [@Roxy-3DPrintBoard] - English
-
-More features have been added by:
-  - Alberto Cotronei [@MagoKimbra]
-  - Lampmaker,
-  - Bradley Feldman,
-  - and others...
+Notable contributors include:
+ - Alberto Cotronei [[@MagoKimbra](https://github.com/MagoKimbra)]
+ - Andreas Hardtung [[@AnHardt](https://github.com/AnHardt)]
+ - Bernhard Kubicek [[@bkubicek](https://github.com/bkubicek)]
+ - Bob Cousins [[@bobc](https://github.com/bobc)]
+ - Chris Palmer [[@nophead](https://github.com/nophead)]
+ - David Braam [[@daid](https://github.com/daid)]
+ - Edward Patel [[@epatel](https://github.com/epatel)]
+ - Erik van der Zalm [[@ErikZalm](https://github.com/ErikZalm)]
+ - Ernesto Martinez [[@emartinez167](https://github.com/emartinez167)]
+ - F. Malpartida [[@fmalpartida](https://github.com/fmalpartida)]
+ - Jochen Groppe [[@CONSULitAS](https://github.com/CONSULitAS)]
+ - João Brazio [[@jbrazio](https://github.com/jbrazio)]
+ - Kai [[@Kaibob2](https://github.com/Kaibob2)]
+ - Luc Van Daele[[@LVD-AC](https://github.com/LVD-AC)]
+ - Nico Tonnhofer [[@Wurstnase](https://github.com/Wurstnase)]
+ - Petr Zahradnik [[@clexpert](https://github.com/clexpert)]
+ - Thomas Moore [[@tcm0116](https://github.com/tcm0116)]
+ - [[@alexxy](https://github.com/alexxy)]
+ - [[@android444](https://github.com/android444)]
+ - [[@benlye](https://github.com/benlye)]
+ - [[@bgort](https://github.com/bgort)]
+ - [[@Grogyan](https://github.com/Grogyan)]
+ - [[@marcio-ao](https://github.com/marcio-ao)]
+ - [[@maverikou](https://github.com/maverikou)]
+ - [[@oysteinkrog](https://github.com/oysteinkrog)]
+ - [[@p3p](https://github.com/p3p)]
+ - [[@paclema](https://github.com/paclema)]
+ - [[@paulusjacobus](https://github.com/paulusjacobus)]
+ - [[@psavva](https://github.com/psavva)]
+ - [[@Tannoo](https://github.com/Tannoo)]
+ - [[@teemuatlut](https://github.com/teemuatlut)]
+ - ...and many others
 
 ## License
 
